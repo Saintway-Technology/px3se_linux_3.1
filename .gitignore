@@ -1,0 +1,17 @@
+rockimg
+*.img
+*.qmake.stash
+*.*patch
+.rkmkdirs
+.rkmkdirs_first
+app/camera/cameraView
+app/carmachine/Carmachine
+app/carmachine/Makefile
+app/carmachine/pkg-config_wrapper.sh
+app/gallery/galleryView
+app/music/musicPlayer
+app/settings/settings
+app/video/videoPlayer
+external/io/io
+external/rkbt/rkrtkbt
+kernel/drivers/gpu/arm/mali400/mali/__malidrv_build_info.c

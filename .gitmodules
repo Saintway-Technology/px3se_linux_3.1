@@ -1,0 +1,3 @@
+[submodule "external/gstreamer-rockchip/common"]
+	path = external/gstreamer-rockchip/common
+	url = git://anongit.freedesktop.org/gstreamer/common

@@ -1,0 +1,50 @@
+&fb {
+        rockchip,disp-mode = <ONE_DUAL>;
+        rockchip,uboot-logo-on = <0>;
+};
+
+&i2c2 {
+        status = "okay";
+        tp@40 {
+                compatible = "gslX680_312x";
+                reg = <0x40>;
+                touch-gpio = <&gpio0 GPIO_A2 IRQ_TYPE_LEVEL_LOW>;       /* TP_INT == GPIO1_B0 */
+                reset-gpio = <&gpio0 GPIO_D1 GPIO_ACTIVE_LOW>;          /* TP_RST == GPIO0_D1 */
+                max-x = <1024>;
+                max-y = <600>;
+                status = "okay";
+        };
+};
+
+/ {
+
+        disp_timings: display-timings {
+                native-mode = <&timing0>;
+
+                timing0: timing0 {
+                                screen-type = <SCREEN_RGB>;
+                                lvds-format = <LVDS_8BIT_1>;
+                                out-face    = <OUT_P666>;
+                                color-mode = <COLOR_RGB>;
+                                clock-frequency = <35000000>;
+                                hactive = <800>;
+                                vactive = <480>;
+                                hback-porch = <46>;
+                                hfront-porch = <210>;
+                                vback-porch = <23>;
+                                vfront-porch = <22>;
+                                hsync-len = <20>;
+                                vsync-len = <13>;
+                                hsync-active = <0>;
+                                vsync-active = <0>;
+                                de-active = <0>;
+                                pixelclk-active = <0>;
+                                swap-rb = <0>;
+                                swap-rg = <0>;
+                                swap-gb = <0>;
+                };
+        };
+};
+  
+
+
