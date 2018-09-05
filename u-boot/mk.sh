@@ -1,1 +1,1 @@
-make px3se_linux_defconfig && make -j8
+make distclean && make px3se_linux_defconfig && make -j8
